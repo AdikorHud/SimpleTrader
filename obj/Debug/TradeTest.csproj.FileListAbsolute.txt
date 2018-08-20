@@ -1,0 +1,14 @@
+C:\Users\Playstation\Desktop\TradeTest\bin\Debug\TradeTest.exe.config
+C:\Users\Playstation\Desktop\TradeTest\bin\Debug\TradeTest.exe
+C:\Users\Playstation\Desktop\TradeTest\bin\Debug\TradeTest.pdb
+C:\Users\Playstation\Desktop\TradeTest\obj\Debug\TradeTest.csprojAssemblyReference.cache
+C:\Users\Playstation\Desktop\TradeTest\obj\Debug\TradeTest.csproj.CoreCompileInputs.cache
+C:\Users\Playstation\Desktop\TradeTest\obj\Debug\TradeTest.exe
+C:\Users\Playstation\Desktop\TradeTest\obj\Debug\TradeTest.pdb
+C:\Users\Playstation\Desktop\TradeTest_v1.1\bin\Debug\TradeTest.exe.config
+C:\Users\Playstation\Desktop\TradeTest_v1.1\bin\Debug\TradeTest.exe
+C:\Users\Playstation\Desktop\TradeTest_v1.1\bin\Debug\TradeTest.pdb
+C:\Users\Playstation\Desktop\TradeTest_v1.1\obj\Debug\TradeTest.csprojAssemblyReference.cache
+C:\Users\Playstation\Desktop\TradeTest_v1.1\obj\Debug\TradeTest.csproj.CoreCompileInputs.cache
+C:\Users\Playstation\Desktop\TradeTest_v1.1\obj\Debug\TradeTest.exe
+C:\Users\Playstation\Desktop\TradeTest_v1.1\obj\Debug\TradeTest.pdb
