@@ -22,18 +22,18 @@ namespace TradeTest
             Console.ReadLine();
             
             
-            while(Analyzer.GetApproval(state.GetLastPrice(), state.GetLowPrice()) && state.UpdatePrice())
+            while(Analyzer.GetApproval(state.GetClosePrice(), state.GetLowPrice()) && state.UpdatePrice())
             {
                 state.UpdatePrice();
                 myTrader.UpdateTrades(ref state, myWallet);
             }
 
 
-            Console.WriteLine("Ending balance: {0} BTC || {1} USDT.", myWallet.GetBTC(), myWallet.GetUSDT());
-            Console.WriteLine("Net revenue USDT: {0}", ((myWallet.GetBTC() * state.GetLastPrice()) + myWallet.GetUSDT()) - InitialUSDT);
-            Console.WriteLine("Total trades: {0} and Loose Sells: {1}", myWallet.totalTrades, myTrader.totalLooseSells);
+            Console.WriteLine("\nEnding balance: {0} BTC || {1} USDT.", myWallet.GetBTC(), myWallet.GetUSDT());
+            Console.WriteLine("Net revenue USDT: {0}", ((myWallet.GetBTC() * state.GetClosePrice()) + myWallet.GetUSDT()) - InitialUSDT);
+            Console.WriteLine("Total trades: {0} and Loose Sells: {1} Consecutive: {2}", myWallet.totalTrades, myTrader.totalLooseSells, myTrader.consecutiLooseSellsCounter);
 
-            Console.WriteLine("Average Modifier: " + myTrader.averageModifier);
+            Console.WriteLine("Average Modifier: " + myTrader.buyingPriceModifier);
             Console.WriteLine("Min. revenue: " + myTrader.minRevenue);
             Console.WriteLine("Loose tolerance: " + myTrader.dropTolerance);
                         

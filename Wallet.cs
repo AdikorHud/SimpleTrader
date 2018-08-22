@@ -89,11 +89,11 @@ namespace TradeTest
 
             if (USDT > 1 && authorizeBuy == true)
             {
-                autohorizedFunds = USDT * 0.5;
+                autohorizedFunds = USDT * 1.0;
                 transactionFee = autohorizedFunds * baseFeePercent; //Calculates transaction fee.
                 autohorizedFunds = autohorizedFunds - transactionFee; //Discounts transaction fee.
 
-                UpdateUSDT((USDT * 0.5));
+                UpdateUSDT((USDT * 0.0));
 
                 authorizeBuy = false;
                 authorizeSell = true;

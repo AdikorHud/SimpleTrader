@@ -9,9 +9,10 @@ namespace TradeTest
 {
     class CurrencyState
     {
-        private double BTC_lastPrice = 0.0f;
-        private double BTC_lowPrice = 0.0f;
-        private double BTC_highPrice = 0.0f;
+        private double BTC_open = 0.0f;
+        private double BTC_close = 0.0f;
+        private double BTC_low = 0.0f;
+        private double BTC_high = 0.0f;
         private double BTC_average = 0.0f;
         private long Time = 0;
 
@@ -22,20 +23,24 @@ namespace TradeTest
             UpdatePrice();
         }
 
-
-        public double GetLastPrice()
+        public double GetOpenPrice()
         {
-            return BTC_lastPrice;
+            return BTC_open;
+        }
+
+        public double GetClosePrice()
+        {
+            return BTC_close;
         }
 
         public double GetLowPrice()
         {
-            return BTC_lowPrice;
+            return BTC_low;
         }
 
         public double GetHighPrice()
         {
-            return BTC_highPrice;
+            return BTC_high;
         }
 
         public double GetAveragePrice()
@@ -53,25 +58,27 @@ namespace TradeTest
                 parser.SetDelimiters(";");
 
                 //Skip header
-                parser.ReadFields();
+                //parser.ReadFields();
                 
-                // Skip processed
-                for (int i = 0; i < counter; i++)
+                // Skip processed and header
+                for (int i = 0; i <= counter; i++)
                 {
                     parser.ReadFields();
                 }
 
-                if (!parser.EndOfData && counter < 2000)
+
+                if (!parser.EndOfData)
                 {
                     //Process row
                     string[] fields = parser.ReadFields();
 
                     Time = long.Parse(fields[0]);
-                    BTC_highPrice = double.Parse(fields[1]);
-                    BTC_lowPrice = double.Parse(fields[2]);
-                    BTC_lastPrice = double.Parse(fields[4]);
+                    BTC_high = double.Parse(fields[1]);
+                    BTC_low = double.Parse(fields[2]);
+                    BTC_open = double.Parse(fields[3]);
+                    BTC_close = double.Parse(fields[4]);
 
-                    BTC_average = (BTC_highPrice + BTC_lowPrice) / 2;
+                    BTC_average = (BTC_high + BTC_low) / 2;
 
                     counter++;
 
